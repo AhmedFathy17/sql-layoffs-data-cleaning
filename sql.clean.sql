@@ -5,7 +5,7 @@
 -- 3-Null Values or blank values
 -- 4-Remove Any columns
 
--- في الاول هنعمل جدول تاني علشان لو البيانات بوظناها يبقي معانا زي نسخه كدا
+--في الاول هنعمل جدول تاني علشان لو البيانات بوظناها يبقي معانا  نسخه ا
 -- (1.remove_duplicated)
 
 create table layoffs_staging
@@ -169,6 +169,5 @@ from layoffs_staging2;
 
 -- عندنا كان في مع كلمه open & paid رموز 
 -- ف احنا شيلناها ب replace
--- مش هنعمل update علشان نكون مع الكورس 
 select company,replace(replace(company,'&',''),'#','') as clean_company
 from layoffs_staging2;
